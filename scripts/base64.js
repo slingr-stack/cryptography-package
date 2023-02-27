@@ -1,7 +1,7 @@
 exports.encode = function (str) {
-    return btoa(str);
+    return sys.utils.base64.encode(str);
 }
 
 exports.decode = function (str) {
-    return atob(str);
+    return sys.utils.base64.decode(str);
 }
