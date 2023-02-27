@@ -1,0 +1,14 @@
+{
+   "label": "Encryption",
+   "name": "encryption",
+   "dependencies": [],
+   "configuration":[],
+   "events": [],
+   "metadata": [
+       {
+           "type": "script",
+           "namespace": "api",
+           "path": "/scripts/base64.js"
+       }
+   ]
+}
