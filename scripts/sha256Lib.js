@@ -1,9 +1,11 @@
-function sha256(message) {
-    var crypto = window.crypto || window.msCrypto;
-    var buffer = new TextEncoder('utf-8').encode(message);
-    var digest = crypto.subtle.digest('SHA-256', buffer);
-    return hex(digest);
-}
+var sha256 = {
+    encode: function(message) {
+        var crypto = window.crypto || window.msCrypto;
+        var buffer = new TextEncoder('utf-8').encode(message);
+        var digest = crypto.subtle.digest('SHA-256', buffer);
+        return hex(digest);
+    }
+};
 
 function hex(buffer) {
     var hexCodes = [];
@@ -18,8 +20,10 @@ function hex(buffer) {
     return hexCodes.join('');
 }
 
-if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
-    module.exports = {
-        sha256: sha256
-    };
+// Exporta la función para que pueda ser importada en otros archivos
+if (typeof exports !== 'undefined') {
+    if (typeof module !== 'undefined' && module.exports) {
+        exports = module.exports = sha256;
+    }
+    exports.sha256 = sha256;
 }
