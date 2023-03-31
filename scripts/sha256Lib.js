@@ -1,29 +1,35 @@
-var sha256 = {
-    encode: function(message) {
+(function () {
+    function Sha256() {
+        return new Sha256();
+    }
+
+    Sha256.prototype.encode = function(message) {
         var crypto = window.crypto || window.msCrypto;
         var buffer = new TextEncoder('utf-8').encode(message);
         var digest = crypto.subtle.digest('SHA-256', buffer);
         return hex(digest);
-    }
-};
+    };
 
-function hex(buffer) {
-    var hexCodes = [];
-    var view = new DataView(buffer);
-    for (var i = 0; i < view.byteLength; i += 4) {
-        var value = view.getUint32(i);
-        var stringValue = value.toString(16);
-        var padding = '00000000';
-        var paddedValue = (padding + stringValue).slice(-padding.length);
-        hexCodes.push(paddedValue);
+    function hex(buffer) {
+        var hexCodes = [];
+        var view = new DataView(buffer);
+        for (var i = 0; i < view.byteLength; i += 4) {
+            var value = view.getUint32(i);
+            var stringValue = value.toString(16);
+            var padding = '00000000';
+            var paddedValue = (padding + stringValue).slice(-padding.length);
+            hexCodes.push(paddedValue);
+        }
+        return hexCodes.join('');
     }
-    return hexCodes.join('');
-}
 
-// Exporta la función para que pueda ser importada en otros archivos
-if (typeof exports !== 'undefined') {
-    if (typeof module !== 'undefined' && module.exports) {
-        exports = module.exports = sha256;
+    // Exporta el objeto sha256 para que pueda ser usado en otros archivos
+    if (typeof exports !== 'undefined') {
+        if (typeof module !== 'undefined' && module.exports) {
+            exports = module.exports = Sha256;
+        }
+        exports.Sha256 = Sha256;
+    } else {
+        window.sha256 = new Sha256();
     }
-    exports.sha256 = sha256;
-}
+})();
