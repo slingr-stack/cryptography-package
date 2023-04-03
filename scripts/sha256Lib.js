@@ -23,13 +23,5 @@
         return hexCodes.join('');
     }
 
-    // Exporta el objeto sha256 para que pueda ser usado en otros archivos
-    if (typeof exports !== 'undefined') {
-        if (typeof module !== 'undefined' && module.exports) {
-            exports = module.exports = Sha256;
-        }
-        exports.Sha256 = Sha256;
-    } else {
-        window.sha256 = new Sha256();
-    }
+    exports.Sha256 = Sha256;
 })();
