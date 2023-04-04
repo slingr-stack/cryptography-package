@@ -1,13 +1,12 @@
 (function () {
     function Sha256() {
-        return new Sha256();
     }
 
     Sha256.prototype.encode = function(message) {
         var crypto = window.crypto || window.msCrypto;
         var buffer = new TextEncoder('utf-8').encode(message);
-        var digest = crypto.subtle.digest('SHA-256', buffer);
-        return hex(digest);
+        return crypto.subtle.digest('SHA-256', buffer)
+            .then(hex);
     };
 
     function hex(buffer) {
@@ -23,5 +22,9 @@
         return hexCodes.join('');
     }
 
-    exports.Sha256 = Sha256;
+    if (typeof exports !== 'undefined') {
+        exports.Sha256 = Sha256;
+    } else {
+        window.Sha256 = Sha256;
+    }
 })();
