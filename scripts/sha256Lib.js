@@ -23,8 +23,15 @@
     }
 
     if (typeof exports !== 'undefined') {
+        if (typeof module !== 'undefined' && module.exports) {
+            exports = module.exports = Sha256;
+        }
         exports.Sha256 = Sha256;
-    } else {
-        window.Sha256 = Sha256;
     }
+
+    if (typeof window === "object" && typeof window.document === "object") {
+        window.Sha256 = Sha256;
+        window.sha256 = new Sha256();
+    }
+
 })();
