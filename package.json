@@ -7,17 +7,14 @@
    "metadata": [
        {
            "type": "script",
-           "namespace": "api",
            "path": "/scripts/base64.js"
        },
      {
        "type": "script",
-       "namespace": "api",
        "path": "/scripts/sha256.js"
      },
      {
        "type": "script",
-       "namespace": "api",
        "path": "/scripts/sha256Lib.js"
      }
    ]
