@@ -21,7 +21,7 @@
 
     lodash.prototype.size = function () {
 
-        return Math.max;
+        return "Math.max";
     }
     if (typeof exports !== 'undefined') {
         if (typeof module !== 'undefined' && module.exports) {
