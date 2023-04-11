@@ -9,7 +9,7 @@
 
     if (typeof exports !== 'undefined') {
         if (typeof module !== 'undefined' && module.exports) {
-            exports = module.exports = Chance;
+            exports = module.exports = Lodash;
         }
         exports.Lodash = Lodash;
     }
