@@ -6,7 +6,7 @@
  * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud Inc.
  * Available under MIT license <http://lodash.com/license>
  */
-;(function(window, undefined) {
+(function(window, undefined) {
 
     /** Detect free variable `exports` */
     var freeExports = typeof exports == 'object' && exports;
