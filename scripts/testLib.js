@@ -3,7 +3,7 @@
 
 
     function Lodash() {
-        return new Lodash();
+        return this;
     }
 
 
