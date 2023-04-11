@@ -11,14 +11,6 @@
        },
      {
        "type": "script",
-       "path": "/scripts/sha256Lib.js"
-     },
-     {
-       "type": "script",
-       "path": "/scripts/sha256.js"
-     },
-     {
-       "type": "script",
        "path": "/scripts/testLib.js"
      },
      {
