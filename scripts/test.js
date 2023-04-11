@@ -1,5 +1,5 @@
-const _lodashInstance = pkg.crypto.testLib.Lodash()
+const _lodashInstance = pkg.crypto.testLib.lodash()
 
-exports.size = function () {
-    return _lodashInstance.size();
+exports.size = function (collection) {
+    return _lodashInstance.size(collection);
 };
