@@ -1,5 +1,5 @@
-const _testInstance = pkg.randomdata.testLib.Test()
+const _lodashInstance = pkg.randomdata.testLib.lodash()
 
-exports.other = function () {
-    return _testInstance.other();
+exports.size = function (object) {
+    return _lodashInstance.size(object);
 };
