@@ -6,18 +6,10 @@
             return this;
         }
     }
-
     lodash.prototype.size = function () {
-        // var length = collection ? collection.length : 0;
-        // return typeof length == 'number' ? length : keys(collection).length;
-        return "size";
+
+        return Math.max;
     }
-
-
-
-
-
-
     if (typeof exports !== 'undefined') {
         if (typeof module !== 'undefined' && module.exports) {
             exports = module.exports = lodash;
