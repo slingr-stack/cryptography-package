@@ -16,6 +16,14 @@
     // window._ = Lodash;
     //
 
+    if (typeof exports !== 'undefined') {
+        if (typeof module !== 'undefined' && module.exports) {
+            exports = module.exports = Chance;
+        }
+        exports.Lodash = Lodash;
+    }
+
+
     if (typeof window === "object" && typeof window.document === "object") {
         window.Lodash = Lodash;
         window.lodash = new Lodash();
