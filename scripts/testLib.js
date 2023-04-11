@@ -1,6 +1,10 @@
 (function() {
     function Lodash() {
-        return this;
+        if (!(this instanceof Lodash)) {
+            return new Lodash();
+        }else{
+            return this;
+        }
     }
 
     Lodash.prototype.size = function () {
