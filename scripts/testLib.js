@@ -1,11 +1,5 @@
-(function() {
-    // function lodash() {
-    //     if (!(this instanceof lodash)) {
-    //         return new lodash();
-    //     }else{
-    //         return this;
-    //     }
-    // }
+(function(window, undefined) {
+
 
     function lodash(value) {
         // exit early if already wrapped, even if wrapped by a different `lodash` constructor
@@ -35,4 +29,4 @@
         window.lodash = new lodash();
     }
 
-}());
+}(this));
