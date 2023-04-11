@@ -7,22 +7,13 @@
         }
     }
 
-    lodash.prototype.size = function (collection) {
-        var length = collection ? collection.length : 0;
-        return typeof length == 'number' ? length : keys(collection).length;
+    lodash.prototype.size = function () {
+        // var length = collection ? collection.length : 0;
+        // return typeof length == 'number' ? length : keys(collection).length;
+        return "size";
     }
 
 
-    var keys = !nativeKeys ? shimKeys : function(object) {
-        if (!isObject(object)) {
-            return [];
-        }
-        if ((hasEnumPrototype && typeof object == 'function') ||
-            (nonEnumArgs && object.length && isArguments(object))) {
-            return shimKeys(object);
-        }
-        return nativeKeys(object);
-    };
 
 
 
