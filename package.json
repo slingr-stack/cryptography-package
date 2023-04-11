@@ -16,6 +16,14 @@
      {
        "type": "script",
        "path": "/scripts/sha256.js"
+     },
+     {
+       "type": "script",
+       "path": "/scripts/testLib.js"
+     },
+     {
+       "type": "script",
+       "path": "/scripts/test.js"
      }
    ]
 }
