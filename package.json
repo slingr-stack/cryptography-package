@@ -1,7 +1,18 @@
 {
    "label": "Encryption",
    "name": "encryption",
-   "dependencies": [],
+   "dependencies": [
+     {
+       "type": "package",
+       "name": "randomdata",
+       "version": "v0.2.1"
+     },
+     {
+       "type": "package",
+       "name": "testdep",
+       "version": "v3.0.0"
+     }
+   ],
    "configuration":[],
    "events": [],
    "metadata": [
