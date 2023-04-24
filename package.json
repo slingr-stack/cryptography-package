@@ -10,7 +10,7 @@
      {
        "type": "package",
        "name": "testdep",
-       "version": "v3.0.0"
+       "version": "v3.0.2-dev"
      }
    ],
    "configuration":[],
