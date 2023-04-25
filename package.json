@@ -10,7 +10,7 @@
      {
        "type": "package",
        "name": "testdep",
-       "version": "v3.0.2-dev"
+       "version": "v1.0.0"
      }
    ],
    "configuration":[],
@@ -19,14 +19,6 @@
      {
        "type": "script",
        "path": "/scripts/base64.js"
-       },
-     {
-       "type": "script",
-       "path": "/scripts/testLib.js"
-     },
-     {
-       "type": "script",
-       "path": "/scripts/test.js"
-     }
+       }
    ]
 }
