@@ -5,3 +5,9 @@ exports.encode = function (str) {
 exports.decode = function (str) {
     return sys.utils.base64.decode(str);
 }
+
+exports.dependency = function(str) {
+    var key = dependencies.randomdata.randomInteger();
+    return key;
+}
+
