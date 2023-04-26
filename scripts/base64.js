@@ -7,6 +7,6 @@ exports.decode = function (str) {
 }
 
 exports.dependency = function(str) {
-    var key = dependencies.testdep.t3();
+    var key = dependencies.testdep.test.t3();
     return key;
 }
