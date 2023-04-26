@@ -10,4 +10,3 @@ exports.dependency = function(str) {
     var key = dependencies.randomdata.randomInteger();
     return key;
 }
-
