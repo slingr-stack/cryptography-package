@@ -7,6 +7,6 @@ exports.decode = function (str) {
 }
 
 exports.dependency = function(str) {
-    var key = dependencies.randomdata.randomInteger();
+    var key = dependencies.testdep.t3();
     return key;
 }
