@@ -10,3 +10,8 @@ exports.dependency = function(str) {
     var key = dependencies.testdep.test.t3();
     return key;
 }
+
+exports.dependency2 = function(str) {
+    var key = dependencies.packageTest.test.something();
+    return key;
+}
