@@ -17,6 +17,6 @@ exports.dependency2 = function(str) {
 }
 
 exports.nestedtest = function(){
-    var value =  "Dependency X\n" + dependencies.testdep.test.doublenested()
+    var value =  "Dependency Crypto\n" + dependencies.testdep.test.doublenested()
     return value;
 }
