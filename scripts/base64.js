@@ -15,3 +15,8 @@ exports.dependency2 = function(str) {
     var key = dependencies.packageTest.test.something();
     return key;
 }
+
+exports.nestedtest = function(){
+    var value =  "Dependency X\n" + dependencies.testdep.doublenested()
+    return value;
+}
