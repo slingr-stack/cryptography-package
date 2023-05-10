@@ -1,6 +1,6 @@
 {
    "label": "Encryption",
-   "name": "encryption",
+   "name": "crypto",
    "dependencies": [],
   "configuration":[
     {
