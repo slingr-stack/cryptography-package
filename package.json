@@ -1,7 +1,14 @@
 {
    "label": "Encryption",
    "name": "crypto",
-   "dependencies": [],
+   "dependencies": [
+       {
+           "type": "package",
+           "name": "serviceTest",
+           "version": "v4.1.1",
+            "instanceId" : "shared"
+       }
+   ],
   "configuration":[
     {
       "name": "authenticationMethod",
