@@ -96,8 +96,11 @@
    "metadata": [
      {
        "type": "script",
-       "path": "/scripts/base64.js",
-       "functions": ["encode","decode"]
-       }
+       "path": "/scripts/base64.js"
+     },
+     {
+       "type": "script",
+       "path": "/scripts/test.js"
+     }
    ]
 }
